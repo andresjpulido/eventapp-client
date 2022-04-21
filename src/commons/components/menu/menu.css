@@ -1,0 +1,52 @@
+@import "../../../assets/styles/variables.css";
+
+nav {
+	background-color: var(--primary-bg-color);
+	color: var(--secundary);
+	font-weight: bold;
+}
+
+nav > div {
+	 
+}
+
+nav > div:first-child {
+	background-color: var(--primary-bg-color);
+	height: 4rem;
+}
+
+nav > div > h1 {
+	font-size: 1.5rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 1rem;
+}
+
+nav > div > h1 > span:first-child {
+	color: var(--primary-color);
+}
+
+nav > div > h1 > span:last-child {
+	color: var(--dark);
+}
+
+nav > div > div:first-child {
+	padding-top: 2rem;
+}
+
+nav > div > div {
+	padding: 1rem;
+	 
+	cursor: pointer;
+	font-size: 0.8rem;
+	text-align: center;
+	margin-left: 0.8rem;
+}
+
+.menu-icon {
+	font-size: 1.5rem;
+	padding-bottom: 0.5rem;
+}
+.active {
+	background-color: var(--main-bg-color);
+	 
+}

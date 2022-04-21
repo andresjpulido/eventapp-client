@@ -1,0 +1,27 @@
+@import "../../../assets/styles/variables.css";
+
+header {
+	background-color: var(--primary-bg-color);
+	display: flex;
+	height: 4rem;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.header-icon {
+	cursor: pointer;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	vertical-align: middle;
+}
+
+.header-image {
+	border-radius: 50%;
+	height: 2rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	max-width: 2rem;
+	vertical-align: middle;
+}
