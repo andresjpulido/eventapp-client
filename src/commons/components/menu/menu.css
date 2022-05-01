@@ -12,21 +12,23 @@ nav > div {
 
 nav > div:first-child {
 	background-color: var(--primary-bg-color);
-	height: 4rem;
+	height: 5rem;
 }
 
 nav > div > h1 {
-	font-size: 1.5rem;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	padding: 1rem;
+	font-size: 3rem;
+	font-family: "acme";
+	 
 }
 
 nav > div > h1 > span:first-child {
 	color: var(--primary-color);
+	font-family: "acme";
 }
 
 nav > div > h1 > span:last-child {
 	color: var(--dark);
+	font-family: "acme";
 }
 
 nav > div > div:first-child {

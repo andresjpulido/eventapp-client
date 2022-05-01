@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./menu.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AppContext from "../../../AppContext";
 
 export default function Menu() {
 	const [isMenuOpen, setisMenuOpen] = useState(false);
 	const [page, setpage] = useState("home");
+	const { user, setuser } = React.useContext(AppContext);
 
 	let history = useNavigate();
 
@@ -20,8 +22,11 @@ export default function Menu() {
 		history(page);
 	}
 
+	if(!user)
+		return(<div> </div>)
+
 	return (
-		<nav>
+		<nav >
 			<div>
 				<h1>
 					<span>Events</span>

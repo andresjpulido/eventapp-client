@@ -8,6 +8,9 @@ import Home from "./commons/pages/home";
 import Footer from "./commons/components/footer";
 import Menu from "./commons/components/menu";
 import DashboardPage from "./dashboard/pages";
+import SignupPage from "./auth/pages/signup";
+import LoginPage from "./auth/pages/login";
+
 
 /*
 import SettingsPage from "./settings/pages/setup";
@@ -22,18 +25,24 @@ import UsersPage from "./user/pages/users";
 
 import AppProvider from "./AppProvider";
 import Loading from "./commons/components/loading";
+ 
 
 function App() {
+ 
 	return (
 		<AppProvider>
 			<div className="App">
 				<BrowserRouter>
-					<div className="content">
+					<div className= "content" >
+						 
 						<Menu />
 						<div>
 							<Header />
 							<div className="app">
 								<Routes>
+									<Route path="/" element={<LoginPage />} exact />
+									<Route path="/login" element={<LoginPage />} exact />
+									<Route path="/signup" element={<SignupPage />} exact />
 									<Route path="/dashboard" element={<DashboardPage />} exact />
 
 									<Route path="/users" exact element={<UsersPage />} />
@@ -42,11 +51,12 @@ function App() {
 
 									<Route element={<Home />} />
 								</Routes>
+								 
 							</div>
 						</div>
 					</div>
 					<Loading />
-
+					
 					<Footer />
 				</BrowserRouter>
 			</div>

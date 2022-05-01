@@ -3,13 +3,14 @@
 header {
 	background-color: var(--primary-bg-color);
 	display: flex;
-	height: 4rem;
+	height: 5rem;
 	justify-content: space-between;
     align-items: center;
 }
 
 .header-icon {
 	cursor: pointer;
+	font-size: 1.4rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
 	margin-top: 1rem;

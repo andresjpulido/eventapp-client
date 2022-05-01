@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import registerFaIcons from "./registerFaIcons";
+import './assets/fonts/Acme-Regular.ttf';
+import './assets/fonts/IndieFlower-Regular.ttf';
+import './assets/fonts/PatuaOne-Regular.ttf'
 
 registerFaIcons();
 
