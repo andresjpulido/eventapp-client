@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+[![GitHub stars](https://img.shields.io/github/stars/andresjpulido/eventapp-client)](https://github.com/andresjpulido/eventapp-client/stargazers)
+[![GitHub license](https://img.shields.io/github/license/andresjpulido/eventapp-client)](https://github.com/andresjpulido/eventapp-client/blob/main/LICENSE)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -15,6 +17,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `npm test`
+[![GitHub issues](https://img.shields.io/github/issues/andresjpulido/eventapp-client)](https://github.com/andresjpulido/eventapp-client/issues)
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
