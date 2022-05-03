@@ -27,12 +27,7 @@ export default function Menu() {
 
 	return (
 		<nav >
-			<div>
-				<h1>
-					<span>Events</span>
-					<span>App</span>
-				</h1>
-			</div>
+			
 			<div>
 				<div
 					className={page === "dashboard" ? "active" : ""}

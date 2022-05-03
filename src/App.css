@@ -111,3 +111,41 @@ button:hover {
 .section .items {
 	display: block;
 }
+
+h2 {
+	color: var(--dark);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 1.3rem;
+	font-weight: bold;
+	font-family: "patuaone";
+}
+
+h3 {
+	color: var(--dark);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: "patuaone";
+}
+
+p {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+ul.item-list {
+	list-style-type: none;
+}
+
+ul.item-list li {
+	background-color: var(--primary-bg-color);
+	border-radius: 1rem;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+ul.item-list li:hover {
+	cursor: pointer;
+}

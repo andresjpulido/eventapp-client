@@ -1,40 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import AppContext from "../../../AppContext";
 import { useNavigate } from "react-router-dom";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import photo from "../../../assets/images/map.jpeg";
-
+import Logo from "../logo";
 
 export default function Header() {
 	const { user, setuser } = React.useContext(AppContext);
-	let history = useNavigate();
-
-	useEffect(() => {
-
-console.log(window.location.pathname)
-
-		if (!user && window.location.pathname !=="/signup") {
-			let token = localStorage.getItem("sessionEventApp");
-			if (token) {
-				//validate token on server
-				if (user) {
-
-				} else {
-					localStorage.removeItem("sessionEventApp");
-					history("/login"); 
-				}
-			} else {
-				localStorage.removeItem("sessionEventApp");	 
-				history("/login"); 
-			}
-		}
-	}, [user, history]);
-
-	if (!user) return <div> </div>;
+	const { loading, setLoading } = React.useContext(AppContext);
 
 	return (
 		<header>
+			<Logo />
 			<div>
 				<FontAwesomeIcon
 					icon={["fas", "minus"]}
@@ -55,23 +34,29 @@ console.log(window.location.pathname)
 					className="header-icon"
 					title="language"
 				/>
-				<FontAwesomeIcon
-					icon={["fas", "bell"]}
-					className="header-icon"
-					title="Notifications"
-				/>
-				<FontAwesomeIcon
-					icon={["fas", "comment"]}
-					className="header-icon"
-					title="messages"
-				/>
-				<img src={photo} alt="profile" className="header-image" />
-				{user.name}
-				<FontAwesomeIcon
-					icon={["fas", "ellipsis-vertical"]}
-					className="header-icon"
-					title="Menu"
-				/>
+				{user && user.name && (
+					<div>
+						<FontAwesomeIcon
+							icon={["fas", "bell"]}
+							className="header-icon"
+							title="Notifications"
+						/>
+						<FontAwesomeIcon
+							icon={["fas", "comment"]}
+							className="header-icon"
+							title="messages"
+						/>
+						<img src={photo} alt="profile" className="header-image" />
+						{user.name}
+						<FontAwesomeIcon
+							icon={["fas", "ellipsis-vertical"]}
+							className="header-icon"
+							title="Menu"
+						/>
+					</div>
+				)}
+
+				{!user && <span><Link to="/login">signIn</Link> or <Link to="/signup">signUp</Link></span>}
 			</div>
 		</header>
 	);

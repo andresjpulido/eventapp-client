@@ -41,7 +41,7 @@ export default function Login() {
 				email: "andres@gmail.com",
 				id:"id767676"
 			});
-			history("/dashboard");
+			history("/home");
 		}
 		setLoading(false);
 	};

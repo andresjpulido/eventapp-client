@@ -15,21 +15,7 @@ nav > div:first-child {
 	height: 5rem;
 }
 
-nav > div > h1 {
-	font-size: 3rem;
-	font-family: "acme";
-	 
-}
 
-nav > div > h1 > span:first-child {
-	color: var(--primary-color);
-	font-family: "acme";
-}
-
-nav > div > h1 > span:last-child {
-	color: var(--dark);
-	font-family: "acme";
-}
 
 nav > div > div:first-child {
 	padding-top: 2rem;

@@ -1,0 +1,13 @@
+@import "../../assets/styles/variables.css";
+
+.home-page {
+	display: flex;
+}
+
+.groups-column {
+}
+
+.events-column {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}

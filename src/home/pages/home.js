@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../../AppContext";
 import photo from "../../assets/images/map.jpeg"; 
-import Menu from "../../commons/components/menu";
+import Breadcrumb from "../../commons/components/breadcrumb";
 
-export default function Dashboard() {
+export default function Home() {
 	const [events, setEvents] = useState([]);
 	const [error, setError] = useState(null);
 	const { loading, setLoading } = React.useContext(AppContext);
@@ -40,12 +40,13 @@ export default function Dashboard() {
 	));
 
 	return (
-		<section className="page">
+		<section className="page ">
 			<div className="header-page">
-				<h1>Dashboard</h1>
-				<span>home > Dashboard</span>
+				<h1>Welcome!</h1>
+				<Breadcrumb path="home" />
+				
 			</div>
-			<div>
+			<div >
 				<h2>Today</h2>
 				<div className="section">
 					<div>
