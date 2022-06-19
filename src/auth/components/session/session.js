@@ -43,6 +43,7 @@ export default function Header() {
 		if (
 			window.location.pathname === "/signup" ||
 			window.location.pathname === "/" ||
+			 
 			window.location.pathname === "/login"
 		)
 			return;
@@ -61,7 +62,7 @@ export default function Header() {
 				history("/login");
 			}
 		}
-	}, [user, history]);
+	}, [user]);
 
 	if (!user) return <div> </div>;
 

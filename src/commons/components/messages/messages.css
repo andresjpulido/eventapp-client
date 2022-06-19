@@ -1,0 +1,47 @@
+@import "../../../assets/styles/variables.css";
+
+.error {
+	align-items: center;
+    background-color: var(--primary-bg-color);border-left-style: solid; 
+	border-left-color: var(--alert);
+	border-left-width: 10px; 
+	display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 0.9rem; 
+	margin: 2rem; 
+	justify-content: space-between; 
+}
+
+.error-title {
+	color: var(--secundary);
+	font-size: 2rem;
+}
+
+.error-subtitle {
+	color: var(--secundary);
+	font-size: 1rem;
+}
+
+.error-icon {
+	color: var(--alert);
+	font-size: 2rem;
+}
+
+.error-code {
+}
+
+.error-description {
+}
+
+.error-link {
+	align-items: flex-end;
+}
+
+.error > div {
+	margin: 1rem;
+}
+
+.error > div:first-child {
+	font-size: 1.75rem;
+	font-weight: bold;
+}

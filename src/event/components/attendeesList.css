@@ -1,0 +1,36 @@
+@import "../../assets/styles/variables.css";
+
+.attendeesList {
+	display: flex;
+    background-color: var(--superlight);
+}
+
+.attendeesList > .item {
+   
+}
+ 
+.attendeesList > .item > .avatar {
+    background-color: var(--superlight);
+    color: var(--dark);
+    font-size: 3rem;
+    margin: 1rem;
+    border: .1rem var(--dark) solid;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
+
+.attendeesList > .item > .name {
+    align-items: center;
+    color: var(--dark);
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}

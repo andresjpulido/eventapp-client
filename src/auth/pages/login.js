@@ -28,18 +28,28 @@ export default function Login() {
 
 		setLoading(true);
 
-		const res = await fetch(url).catch((error) => {
+		const res = await fetch(url, {
+			method: "POST",
+			body: JSON.stringify(form),
+			headers: {
+				"Content-Type": "application/json",
+				// 'Content-Type': 'application/x-www-form-urlencoded',
+			},
+		}).catch((error) => {
 			console.log(error);
 			setLoading(false);
 		});
 
 		if (res) {
 			const data = await res.json();
-			localStorage.setItem("sessionEventApp", data);
+
+			console.log(data);
+
+			localStorage.setItem("sessionEventApp", data.token);
 			setuser({
-				name: "andres",
-				email: "andres@gmail.com",
-				id:"id767676"
+				name: data.user.name,
+				email: data.user.email,
+				id: data.user._id,
 			});
 			history("/home");
 		}

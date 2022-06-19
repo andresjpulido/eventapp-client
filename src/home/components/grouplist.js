@@ -1,15 +1,21 @@
-import React from "react"; 
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function EventList(props) {
+export default function GroupList(props) {
 	 
-    let events = props.data;
+    let groups = props.data;  
+	let history = useNavigate();
 
-    if(!events)
-    return <div></div>
+	const goTodetails = (id) => { 
+        history("/group/"+id);
+	};
 
-	const groupList = events.map((event, index) => (
+	if (groups === null || !Array.isArray(groups) || groups.length === 0) return <div>No groups to show.</div>;
+    
+
+	const groupList = groups.map((event, index) => (
 		<div key={index}>
-			<li>{event.name}
+			<li onClick={() => goTodetails(`${event._id}`)}>{event.name}
             </li>
 		</div>
 	));

@@ -1,0 +1,35 @@
+@import "../../../assets/styles/variables.css";
+
+.chat-container {
+	background-color: var(--superlight);
+	z-index: 3;
+	position: fixed;
+	bottom: 0;
+	width: 25%;
+	height: 300px;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+    border: .1rem var(--border-color) solid;
+}
+
+.chat-container-head {
+	background-color: var(--dark);
+	color: white;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+    padding: .3rem;
+}
+
+.chat-container-head .avatar {
+	width: 2rem;
+	height: 2rem;
+	align-items: center;
+    border-radius: 50%;
+}
+
+.chat-container-head .name {
+	font-weight: bold;
+    padding-left: .5rem;
+}

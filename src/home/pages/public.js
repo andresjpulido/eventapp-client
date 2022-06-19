@@ -9,10 +9,9 @@ import "./home.css";
 
 export default function Public() {
 	const [events, setEvents] = useState([]);
-	const [groups, setGroups] = useState([]);
-	const [error, setError] = useState(null);
-	const { loading, setLoading } = React.useContext(AppContext);
-
+	const [groups, setGroups] = useState([]); 
+	const { loading, setLoading , message, setMessage} = React.useContext(AppContext);
+	 
 	let history = useNavigate();
 	let url = process.env.REACT_APP_URL_EVENTS;
 	let urlgroups = process.env.REACT_APP_URL_GROUPS;
@@ -20,11 +19,15 @@ export default function Public() {
 	let search = async (query) => {
 		setLoading(true);
 
-		const res = await fetch(url + query).catch((error) => {
-			console.log(error);
-			setEvents({
-				error: { code: "net", message: "ERR_NAME_NOT_RESOLVED" },
-			});
+		const res = await fetch(url + query).catch((error) => { 
+			setEvents(null);
+			 
+			setMessage({
+				type:"error",
+				message: "Connection refused",
+				code: 2
+			})
+
 		});
 
 		if (res) {
@@ -37,11 +40,9 @@ export default function Public() {
 	let getGroups = async () => {
 		setLoading(true);
 
-		const res = await fetch(urlgroups).catch((error) => {
-			console.log(error);
-			setGroups({
-				error: { code: "net", message: "ERR_NAME_NOT_RESOLVED" },
-			});
+		const res = await fetch(urlgroups).catch((error) => { 
+			setGroups(null);
+			//{				error: { code: "net", message: "ERR_NAME_NOT_RESOLVED" },			}
 		});
 
 		if (res) {
@@ -81,26 +82,7 @@ export default function Public() {
 
 					<h2>Today</h2>
 
-					<div className="section">
-						<div>
-							<img src={photo} alt="profile" className="header-image" />
-						</div>
-						<div className="items">
-							<div>
-								Meetup en "THE EMPIRE" Primer y Tercer miércoles del mes.
-							</div>
-							<div>
-								Wed, Apr 20 · 7:00 PM NZST Meetup en "THE EMPIRE" Primer y
-								Tercer miércoles del mes.
-							</div>
-							<div>
-								Group name:The Auckland Spanish Language Meetup Group
-								(Conversational)
-							</div>
-							<div>9 attendees</div>
-						</div>
-					</div>
-					<p></p>
+					 
 					<p>My next events</p>
 
 					<p>Organized by me</p>

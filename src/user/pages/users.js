@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import UserList from "../components/userList";
-import Error from "../../commons/components/error";
+import Messages from "../../commons/components/messages";
 import SearchUser from "../components/searchUser";
 import AppContext from "../../AppContext";
 
 export default function Users() {
 	const [users, setUsers] = useState(null); 	 
-	const [error, setError] = useState(null);
 	const {loading, setLoading} = React.useContext(AppContext);
  
 	let url = process.env.REACT_APP_URL_USERS;
@@ -16,9 +15,7 @@ export default function Users() {
 		
 		const res = await fetch(url + query).catch((error) => {
 			console.log(error);
-			setUsers({
-				error: { code: "net", message: "ERR_NAME_NOT_RESOLVED" },
-			});
+			setUsers(null);
 		});
 
 		if (res) {
@@ -36,7 +33,7 @@ export default function Users() {
  
 	if (users && users.error) {
 		return (
-			<Error code={users.error.code} message={users.error.message} />
+			<div></div>
 		);
 	}
  

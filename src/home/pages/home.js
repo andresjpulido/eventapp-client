@@ -3,14 +3,18 @@ import { useNavigate } from "react-router-dom";
 import AppContext from "../../AppContext";
 import photo from "../../assets/images/map.jpeg"; 
 import Breadcrumb from "../../commons/components/breadcrumb";
+import GroupList from "../components/grouplist";
+import EventList from "../components/eventlist";
 
 export default function Home() {
 	const [events, setEvents] = useState([]);
+	const [groups, setGroups] = useState([]);
 	const [error, setError] = useState(null);
 	const { loading, setLoading } = React.useContext(AppContext);
 
 	let history = useNavigate();
 	let url = process.env.REACT_APP_URL_EVENTS;
+	let urlgroups = process.env.REACT_APP_URL_GROUPS;
 
 	let search = async (query) => {
 		setLoading(true);
@@ -29,8 +33,24 @@ export default function Home() {
 		setLoading(false);
 	};
 
+	let getGroups = async () => {
+		setLoading(true);
+
+		const res = await fetch(urlgroups).catch((error) => { 
+			setGroups(null);
+			//{				error: { code: "net", message: "ERR_NAME_NOT_RESOLVED" },			}
+		});
+
+		if (res) {
+			const data = await res.json();
+			setGroups(data);
+		}
+		setLoading(false);
+	};
+
 	useEffect(() => {
 		search("");
+		getGroups();
 	}, [url]);
 
 	const eventList = events.map((event, index) => (
@@ -46,25 +66,32 @@ export default function Home() {
 				<Breadcrumb path="home" />
 				
 			</div>
-			<div >
-				<h2>Today</h2>
-				<div className="section">
-					<div>
-						<img src={photo} alt="profile" className="header-image" />
-					</div>
-					<div className="items">
-						<div>Meetup en "THE EMPIRE" Primer y Tercer miércoles del mes.</div>
-						<div>
-							Wed, Apr 20 · 7:00 PM NZST Meetup en "THE EMPIRE" Primer y Tercer
-							miércoles del mes.
-						</div>
-						<div>
-							Group name:The Auckland Spanish Language Meetup Group
-							(Conversational)
-						</div>
-						<div>9 attendees</div>
-					</div>
+			<div className="home-page">
+				<div className="groups-column">
+					<h2>Groups</h2>
+					<GroupList data={groups} />
 				</div>
+
+				<div className="events-column">
+					<div>
+						<p>
+							EventApp is an community to share events, please check the events
+							in your city or login and participate.
+						</p>
+					</div>
+
+                    <h2>Events</h2>
+
+					<EventList data={events} />
+
+					<h2>Today</h2>
+
+					 
+					<p>My next events</p>
+
+					<p>Organized by me</p>
+				</div>
+
 			</div>
 			<p></p>
 			<p>My next events</p>

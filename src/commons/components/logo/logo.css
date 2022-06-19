@@ -1,5 +1,15 @@
 @import "../../../assets/styles/variables.css";
  
+
+.logo {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+
 .logo > h1 {
 	font-size: 3rem;
 	font-family: "acme";
@@ -13,4 +23,5 @@
 .logo > h1 > span:last-child {
 	color: var(--dark);
 	font-family: "acme";
+	font-weight: bolder;
 }

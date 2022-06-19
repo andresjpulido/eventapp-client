@@ -5,6 +5,8 @@ const AppContext = React.createContext({
 	setLoading: (t) => {},
 	user: null,
 	setuser: (t) => {},
+	message: null,
+	setMessage: (t) => {}
 });
 
 export default AppContext;

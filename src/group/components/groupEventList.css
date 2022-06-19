@@ -1,0 +1,11 @@
+@import "../../assets/styles/variables.css";
+
+.groupEventList {
+	display: flex;
+}
+
+.groupEventList-item {
+    margin: 1rem;
+    border: .1rem red solid;
+    padding: 1rem;
+}

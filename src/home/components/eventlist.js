@@ -5,12 +5,12 @@ export default function EventList(props) {
 	let events = props.data;
     let history = useNavigate();
 
-	const goTodetails = (id) => {
-		console.log(id);
-        history("event/"+id);
+	const goTodetails = (id) => { 
+        history("/event/"+id);
 	};
 
-	if (!events) return <div></div>;
+	if (events === null || !Array.isArray(events) || events.length === 0) return <div>No events to show.</div>;
+ 
 
 	const eventList = events.map((event, index) => (
 		<div key={index}>
