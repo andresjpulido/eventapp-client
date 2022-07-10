@@ -1,17 +1,15 @@
-@import "../../../assets/styles/variables.css";
-
 header {
 	background-color: var(--primary-bg-color);
-	display: flex;
-	height: 5rem;
+	display: flex; 
 	justify-content: space-between;
-    align-items: center;
-	padding-right: 3rem;
+	align-items: center; 
+	background-image: url("../../../assets/images/event.svg");
+	background-size: cover;
 }
 
 .header-icon {
 	cursor: pointer;
-	font-size: 1.4rem;
+	font-size: 1.1rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
 	margin-top: 1rem;
@@ -28,6 +26,28 @@ header {
 	vertical-align: middle;
 }
 
-.left-panel{
+.header-left {
 	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.header-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.header-buttons div {
+	border: 0.1rem var(--secundary) solid;
+	padding: 0.1rem 1rem 0.1rem 1rem;
+ 
+	margin-left: .5rem;
+	margin-right: .5rem; 
+	color: var(--secundary);
+}
+
+.header-right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

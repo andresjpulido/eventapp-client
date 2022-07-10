@@ -1,8 +1,8 @@
-@import "../../assets/styles/variables.css";
-
 .interestList {
 	display: flex;
     flex-wrap: wrap;
+    background-color: var(--superlight);
+    border-radius: .5rem;
 }
 
 .interestList-item {

@@ -108,8 +108,8 @@ let updateInterest = (name)=>{
 			</div>
 
 			<div>
-				Choose one of your groups
-				{groupsList}
+				Choose one of your groups:
+				<div className="grouplist">{groupsList}</div>
 				<div>
 					<button onClick={handleGoBack}>New group</button>
 					<div className="form">
@@ -127,7 +127,7 @@ let updateInterest = (name)=>{
 				</div>
 			</div>
 			<div>
-				Interets
+				Interest
 				<InterestList data={interests} update={updateInterest} />
 				{JSON.stringify(interests)}
 			</div>

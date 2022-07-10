@@ -1,5 +1,3 @@
-@import "../../../assets/styles/variables.css";
-
 .error {
 	align-items: center;
     background-color: var(--primary-bg-color);border-left-style: solid; 

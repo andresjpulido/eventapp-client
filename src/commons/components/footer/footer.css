@@ -1,5 +1,3 @@
-@import "../../../assets/styles/variables.css";
-
 footer {
 	background-color: var(--secundary);
 	color: var(--tertiary);

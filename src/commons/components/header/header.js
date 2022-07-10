@@ -19,7 +19,7 @@ export default function Header() {
 
 	return (
 		<header>
-			<div className="left-panel">
+			<div className="header-left">
 				<Logo />
 				<div>
 					<input type="search"></input>
@@ -30,7 +30,7 @@ export default function Header() {
 					/>
 				</div>
 			</div>
-			<div>
+			<div className="header-right">
 				{user && user.name && <Link to="/newevent">Create event</Link>}
 				{user && user.name && (
 					<FontAwesomeIcon
@@ -59,9 +59,15 @@ export default function Header() {
 				{user && user.name && <SessionMenu />}
 
 				{(!user || !user.name) && (
-					<span>
-						<Link to="/login">signIn</Link> or <Link to="/signup">signUp</Link>
-					</span>
+					<div className="header-buttons">
+						<div>
+							<Link to="/login">signIn</Link>
+						</div>
+						or
+						<div>
+							<Link to="/signup">signUp</Link>
+						</div>
+					</div>
 				)}
 			</div>
 		</header>

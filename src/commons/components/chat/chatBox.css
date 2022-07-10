@@ -1,5 +1,3 @@
-@import "../../../assets/styles/variables.css";
-
 .chat-container {
 	background-color: var(--superlight);
 	z-index: 3;

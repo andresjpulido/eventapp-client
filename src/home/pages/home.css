@@ -1,11 +1,9 @@
-@import "../../assets/styles/variables.css";
-
 .home-page {
 	display: flex;
 }
 
 .groups-column {
-	width: 60rem;
+	 
 }
 
 .events-column {
