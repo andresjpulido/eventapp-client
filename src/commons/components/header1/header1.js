@@ -8,7 +8,7 @@ import photo from "../../../assets/images/map.jpeg";
 import Logo from "../logo";
 import SessionMenu from "../sessionmenu/sessionmenu";
 
-export default function Header() {
+export default function Header1() {
 	const { user, setuser } = React.useContext(AppContext);
 	const { loading, setLoading } = React.useContext(AppContext);
 	let history = useNavigate();

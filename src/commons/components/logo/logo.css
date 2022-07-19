@@ -10,7 +10,7 @@
 .logo > h1 {
 	font-size: 3rem;
 	font-family: "acme";
-	 
+	font-size: clamp(1rem, 2vw + 1rem, 3rem); 
 }
 .logo > h1 > span:first-child {
 	color: var(--primary-color);

@@ -3,7 +3,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import Header from "./commons/components/header";
+import Header1 from "./commons/components/header1";
 import Home from "./commons/pages/home";
 import Footer from "./commons/components/footer";
 
@@ -12,8 +12,9 @@ import SignupPage from "./auth/pages/signup";
 import LoginPage from "./auth/pages/login";
 import HomePage from "./home/pages/home";
 import PublicPage from "./home/pages/public";
+import LandingPage from "./home/pages/landing";
 import Session from "./auth/components/session";
-
+import Header from "./commons/components/header";
 import GroupPage from "./group/pages/group";
 import EventPage from "./event/pages/event";
 import MyGroupsPage from "./group/pages/mygroups";
@@ -53,10 +54,11 @@ function App() {
 					<div className="content">
 						<div>
 							<Session />
+
 							<Header />
 							<div className="app">
 								<Routes>
-									<Route path="/" element={<PublicPage />} exact />
+									<Route path="/" element={<LandingPage />} exact />
 									<Route path="/login" element={<LoginPage />} exact />
 									<Route path="/signup" element={<SignupPage />} exact />
 									<Route path="/dashboard" element={<DashboardPage />} exact />
@@ -67,8 +69,12 @@ function App() {
 									<Route path="/event/:id" element={<EventPage />} exact />
 									<Route path="/newevent" element={<EventGroupPage />} exact />
 
-									<Route path="/conversations" exact element={<ConversationPage />} />
-									
+									<Route
+										path="/conversations"
+										exact
+										element={<ConversationPage />}
+									/>
+
 									<Route path="/users" exact element={<UsersPage />} />
 									<Route path="/user" exact element={<UserPage />} />
 									<Route path="/user/:id" exact element={<UserPage />} />
@@ -80,7 +86,7 @@ function App() {
 						</div>
 					</div>
 					<Loading />
-					<ChatBox socket={socket} />					
+					<ChatBox socket={socket} />
 					<Footer />
 				</BrowserRouter>
 			</div>
