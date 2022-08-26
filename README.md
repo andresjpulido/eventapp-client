@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 [![GitHub stars](https://img.shields.io/github/stars/andresjpulido/eventapp-client)](https://github.com/andresjpulido/eventapp-client/stargazers)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/andresjpulido/eventapp-client)
 [![GitHub license](https://img.shields.io/github/license/andresjpulido/eventapp-client)](https://github.com/andresjpulido/eventapp-client/blob/main/LICENSE)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
