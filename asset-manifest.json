@@ -1,21 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba1fb9fb.css",
-    "main.js": "/static/js/main.c8c3faf5.js",
+    "main.css": "/static/css/main.a712ad2f.css",
+    "main.js": "/static/js/main.845ca0fe.js",
     "static/js/787.9e062899.chunk.js": "/static/js/787.9e062899.chunk.js",
+    "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
+    "static/media/Montserrat-ExtraBold.ttf": "/static/media/Montserrat-ExtraBold.3a9ee100617f45a96d92.ttf",
+    "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/mars.jpg": "/static/media/mars.5dec9d2cfc02beb30ace.jpg",
+    "static/media/Oswald-VariableFont_wght.ttf": "/static/media/Oswald-VariableFont_wght.88fc6c5b10cd8b2781cb.ttf",
     "static/media/loading.gif": "/static/media/loading.ac4a764b6a52a7780da4.gif",
+    "static/media/event.svg": "/static/media/event.4e16ecf07b799b205434.svg",
     "static/media/IndieFlower-Regular.ttf": "/static/media/IndieFlower-Regular.599d26584b9afc1d20b1.ttf",
+    "static/media/logo-eventApp.png": "/static/media/logo-eventApp.d8fdeb3e8a8881bc78a4.png",
     "static/media/PatuaOne-Regular.ttf": "/static/media/PatuaOne-Regular.a9f01afefe6f58c9aeb2.ttf",
+    "static/media/logoh.png": "/static/media/logoh.cc90c21b88ec3ec21821.png",
     "static/media/Acme-Regular.ttf": "/static/media/Acme-Regular.f6db4c5c3282b4e95e85.ttf",
+    "static/media/people.jpg": "/static/media/people.b51c4c14cc499497d747.jpg",
     "static/media/map.jpeg": "/static/media/map.a337cdb46bb37bdcd55e.jpeg",
+    "static/media/logoOff.svg": "/static/media/logoOff.2e0ed6c7802587001ee1e37b7faf108e.svg",
     "index.html": "/index.html",
-    "main.ba1fb9fb.css.map": "/static/css/main.ba1fb9fb.css.map",
-    "main.c8c3faf5.js.map": "/static/js/main.c8c3faf5.js.map",
+    "main.a712ad2f.css.map": "/static/css/main.a712ad2f.css.map",
+    "main.845ca0fe.js.map": "/static/js/main.845ca0fe.js.map",
     "787.9e062899.chunk.js.map": "/static/js/787.9e062899.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba1fb9fb.css",
-    "static/js/main.c8c3faf5.js"
+    "static/css/main.a712ad2f.css",
+    "static/js/main.845ca0fe.js"
   ]
 }
