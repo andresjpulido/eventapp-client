@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import icon from "../../assets/images/logo-eventApp.png";
 import AppContext from "../../AppContext";
 import { Link } from "react-router-dom";
-import "./login.css";
-import Alert from "../../commons/components/alert";
+import "./login.css"; 
 
 export default function Login() {
 	const [form, setForm] = useState({ email: "", password: "" });
 	const { loading, setLoading } = React.useContext(AppContext);
 	const { user, setuser } = React.useContext(AppContext);
+	const { message, setMessage } = React.useContext(AppContext);
 	let history = useNavigate();
 
 	useEffect(() => {
@@ -35,9 +35,16 @@ export default function Login() {
 				"Content-Type": "application/json",
 				// 'Content-Type': 'application/x-www-form-urlencoded',
 			},
+		
+		}).then(function(response) {
+			if (!response.ok) {
+				throw Error(response.statusText);
+			}
+			return response;
+
 		}).catch((error) => {
-			console.log(error);
 			setLoading(false);
+			setMessage({code: "404", message: "User doesn't exist." })
 		});
 
 		if (res) {
@@ -86,12 +93,12 @@ export default function Login() {
 					<div className="form-login-button">
 						<button type="submit">Sign In</button>
 					</div>
-					<Alert />
+					
 					<div className="form-login-link">
 						<Link to="/signup">New user</Link>
 					</div>
 				</form>
-			</div>{" "}
+			</div> 
 		</div>
 	);
 }

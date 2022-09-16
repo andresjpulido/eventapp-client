@@ -1,10 +1,14 @@
 @import "./assets/styles/variables.css";
 
+body {
+	background-color: var(--second-bg-color);
+}
+
 a{
 	color:var(--dark);
 }
 
-.content {
+.cmontent {
 	display: flex;
 	background-color: var(--second-bg-color);
 }
@@ -16,6 +20,7 @@ a{
 .page {
 	margin: clamp(1rem, 2vw + 0.5rem, 2rem);;
 	margin-top: 1rem;
+	position: relative;
 }
 
 .header-page {
@@ -32,7 +37,7 @@ a{
 }
 
 .header-page h1 {
-	font-family: "patuaone";
+	font-family: "nunito";
 	font-size: 2rem;
 	padding-bottom: 0.8rem;
 }

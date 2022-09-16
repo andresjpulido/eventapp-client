@@ -1,6 +1,7 @@
 .logo {
 	margin-left: 2rem;
 	margin-right: 2rem;
+	color: var(--tertiary-color);
 }
 
 .logo:hover {
@@ -9,16 +10,14 @@
 
 .logo > h1 {
 	font-size: 3rem;
-	font-family: "acme";
+	font-family: "nunito";
+	font-weight: bold;
 	font-size: clamp(1rem, 2vw + 1rem, 3rem); 
 }
-.logo > h1 > span:first-child {
-	color: var(--primary-color);
-	font-family: "acme";
-}
+ 
 
 .logo > h1 > span:last-child {
 	color: var(--dark);
-	font-family: "acme";
+	font-family: "nunito";
 	font-weight: bolder;
 }

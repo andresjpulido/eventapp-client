@@ -12,8 +12,8 @@ export default function Logo() {
 	return (
 		<div className="logo" onClick={handleLink}>
 			<h1>
-				<span>Events</span>
-				<span>App</span>
+				 EventsApp
+				 
 			</h1>
 		</div>
 	);

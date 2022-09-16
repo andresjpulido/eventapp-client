@@ -1,6 +1,7 @@
 .error {
 	align-items: center;
-    background-color: var(--primary-bg-color);border-left-style: solid; 
+    background-color: var(--primary-bg-color);
+	border-left-style: solid; 
 	border-left-color: var(--alert);
 	border-left-width: 10px; 
 	display: flex;

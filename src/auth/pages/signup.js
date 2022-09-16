@@ -3,7 +3,7 @@ import icon from "../../assets/images/logo-eventApp.png";
 import AppContext from "../../AppContext";
 import { Link } from "react-router-dom";
 import "./login.css";
-import Alert from "../../commons/components/alert";
+ 
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
@@ -104,9 +104,9 @@ export default function Signup() {
 					<div className="form-login-button">
 						<button onClick={handleSubmit}>Sign up</button>
 					</div>
-					<Alert />
+					 
 				</form>
-			</div>{" "}
+			</div>
 		</div>
 	);
 }

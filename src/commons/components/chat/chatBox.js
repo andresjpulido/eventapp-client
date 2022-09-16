@@ -25,5 +25,5 @@ export default function ChatBox(props) {
 			</div>
             
 		);
-	else return <div>Not Connected</div>;
+	else return <div></div>;
 }

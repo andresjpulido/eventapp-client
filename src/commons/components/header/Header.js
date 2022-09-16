@@ -29,7 +29,7 @@ export default function Header() {
 	}
 
 	return (
-		<header>
+		<header className="header">
 			<div className="header-columns">
 				<div className="letf-side">{user && user.name && <SessionMenu />}
 					<button className="menu-mobile-icon" onClick={updateIsMenuOpen}>
