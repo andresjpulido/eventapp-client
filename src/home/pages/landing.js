@@ -4,6 +4,7 @@ import AppContext from "../../AppContext";
 import "./home.css";
 import people from "../../assets/images/people.jpg";
 import logo from "../../assets/images/logoOff.svg";
+import teamwork from "../../assets/images/teamwork.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Headerlanding from "../components/header-landing";
@@ -57,18 +58,18 @@ export default function Public() {
   return (
     <section className="page">
       <Headerlanding />
-      
-      <h1>Welcome!</h1>
+
       <div className="notes">
-        <div className="note">
+        <div className="note note-s1">
           <h2>WHAT IS EVENTAPP?</h2>
           <p>
             EventApp is an community to share events, please check the events in
             your city or login and participate.
           </p>
         </div>
+
         <div
-          className="note note-img"
+          className="note note-s1 note-img"
           style={{
             backgroundImage: `url(${people})`,
             backgroundRepeat: "no-repeat",
@@ -76,7 +77,8 @@ export default function Public() {
             height: "250px",
           }}
         ></div>
-        <div className="note">
+
+        <div className="note note-s1">
           <p>
             Crea tus propios eventos o juntate con gente que comparte tus mismas
             espectativas.
@@ -90,7 +92,8 @@ export default function Public() {
             }}
           ></div>
         </div>
-        <div className="note-h1">
+
+        <div className="note note-s2">
           <div className="note-header">
             <img
               src={logo}
@@ -104,25 +107,50 @@ export default function Public() {
             ####################
           </div>
           <p>Las categorias mas solicitadas. morado</p>
+          <div>Wilson Newton</div>
         </div>
-         
-        <div className="note-h2">
+
+        <div className="note note-s3">
+          <div className="note-header">
+          <span>
+            <img
+              src={logo}
+              alt="logo"
+              style={{
+                width: "30px",
+                height: "30px",
+                fill: "white",
+              }}
+            /> 
+            </span><span>  ####################</span>
+          </div>
           <p>Las categorias mas solicitadas.</p>
+          <div>Roy Satriani</div>
         </div>
-        <div className="note">
+
+        <div className="note note-s4">
           <h2>TITLE</h2>
-          <div className="note-columns">
-            <div className="note-h1">
+          <div>
+            <div>
               <p>Las categorias mas solicitadas.</p>
             </div>
-            <div className="note-h2">
+            <div>
               <p>Las categorias mas solicitadas.</p>
             </div>
           </div>
         </div>
+
+        <div
+          className="note note-s5"
+          style={{
+            backgroundImage: `url(${teamwork})`,
+          }}
+        > 
+          <p>Know people and communities of similar interests, hobbies, and professions.</p>
+        </div>
       </div>
 
-      <div className="note-columns">
+      <div className="activities-icons">
         <FontAwesomeIcon
           icon={["fas", "baseball"]}
           className="background"

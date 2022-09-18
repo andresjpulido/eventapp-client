@@ -126,9 +126,7 @@ button:hover {
 }
 
 h2 {
-	color: var(--dark);
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	color: var(--dark); 
 	font-size: 1.3rem;
 	font-weight: bold;
 	font-family: "patuaone";

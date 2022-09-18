@@ -1,11 +1,11 @@
 .header-landing {
   background-color: var(--primary-bg-color);
-   
-  margin: 0.1rem;
+  margin: 0rem;
   border: solid 1rem var(--primary-bg-color);
   border-radius: 0.5rem;
   box-shadow: 0rem 0.1rem 1rem var(--primary-color);
   height: 40vh;
+  padding: 1rem;
 }
 
 .header-landing > h1 {
@@ -14,81 +14,162 @@
   padding: 1rem;
 }
 
-.header-landing-link{
-color: var(--primary-color);
-font-weight: bold;
+.header-landing-link {
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
-.note {
-  background-color: var(--primary-bg-color);
+.note { 
   margin: 0.1rem;
-  border: solid 1rem var(--primary-bg-color);
+   
   border-radius: 0.8rem;
-  max-width: 33.333%;
+  flex: 30%;
+}
+
+.note-s1{
+  background-color: var(--primary-bg-color);
+  padding: 1rem;
+}
+
+.note-s2{
+  background-color: var(--primary-color);
+  border-radius: 0.5rem; 
+  color: var(--primary-bg-color);
+  font-size: 1rem;
+  font-family: "montserrat-eb";
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+.note-s2 > div:last-child {
+  font-size: .5rem;
+  text-align: end;
+}
+
+.note-s3{
+  background-color: var(--tertiary-color);
+  color: var(--primary-bg-color);
+  border-radius: 0.5rem; 
+  font-size: 1rem;
+  font-family: "montserrat-eb";
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+.note-s3 > div:last-child {
+  font-size: .5rem;
+  text-align: end;
+}
+
+.note-s4{
+  background-color: var(--primary-bg-color);
+  color: var(--primary-bg-color);
+  font-family: "oswald";
+  padding: 1rem;
+}
+
+.note-s4 > div{
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.note-s4 > div > div:nth-child(odd){
+  background-color: var(--primary-color);
+  border-radius: 0.5rem; 
+  color: var(--primary-bg-color); 
+  padding: .5rem;
+}
+
+.note-s4 > div > div:nth-child(even){
+  background-color: var(--tertiary-color);
+  border-radius: 0.5rem; 
+  color: var(--primary-bg-color);
+  padding: .5rem;
 }
 
 .note-header {
   display: flex;
 }
-
-.note-h1 {
-  background-color: var(--primary-color);
-  border-radius: 0.5rem;
-  color: var(--primary-bg-color);
+ 
+.note-s5 {
+  border-radius: 0.5rem;  
   font-size: 1rem;
   font-family: "montserrat-eb";
   font-weight: bolder;
   padding: 1rem;
-  max-width: 33.333%;
+  position: relative;
+  min-height: 15rem;
 }
-
-.note-h2 {
-  background-color: var(--tertiary-color);
-  border-radius: 0.5rem;
-  color: var(--primary-bg-color);
-  font-size: 1rem;
-  font-family: "montserrat-eb";
-  font-weight: bolder;
-  padding: 1rem;
-  max-width: 33.333%;
+ 
+.note-s5:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: var(--primary-color);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 .note > h2 {
-   font-family: "oswald";
+  font-family: "montserrat-eb";
+  font-size: 1rem;
   color: var(--primary-color);
 }
 
 .note-float {
-  position: absolute;
-  background-image: linear-gradient(  45deg, var(--primary-color), var(--secundary-color));
+  background-image: linear-gradient(
+    45deg,
+    var(--fourth-color),
+    var(--secundary-color)
+  );
   color: var(--primary-bg-color);
   font-family: montserrat-m;
-  gap:1rem;
+  gap: 1rem;
   padding: 1rem;
-  left:50%;
-  top:10vh;
-  width: 45%;
-  height: 200px;
   border-radius: 1rem;
   display: flex;
   align-items: center;
 }
 
-.header-landing-fistline{
+.header-landing-fistline {
   display: flex;
   justify-content: space-between;
 }
 
 .note-columns {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.1rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.activities-icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .notes {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .background {
