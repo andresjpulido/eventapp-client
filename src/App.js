@@ -22,6 +22,12 @@ import EventGroupPage from "./event/pages/newevent";
 import Messages from "./commons/components/messages";
 import ConversationPage from "./conversations/pages/conversations";
 import ChatBox from "./commons/components/chat/chatBox";
+import InterestPage from "./settings/pages/interest";
+import PersonalInfoPage from "./settings/pages/personalInfo";
+import ProfilePage from "./settings/pages/profile";
+import MyEventsPage from "./event/pages/myevents";
+import NotificationsPage from "./settings/pages/notifications";
+
 import io from "socket.io-client";
  
 /*
@@ -67,6 +73,7 @@ function App() {
 									<Route path="/group/:id" element={<GroupPage />} exact />
 									<Route path="/mygroups" element={<MyGroupsPage />} exact />
 									<Route path="/event/:id" element={<EventPage />} exact />
+									<Route path="/myEvents" element={<MyEventsPage />} exact />
 									<Route path="/newevent" element={<EventGroupPage />} exact />
 
 									<Route
@@ -78,6 +85,11 @@ function App() {
 									<Route path="/users" exact element={<UsersPage />} />
 									<Route path="/user" exact element={<UserPage />} />
 									<Route path="/user/:id" exact element={<UserPage />} />
+
+									<Route path="/settings/interest" exact element={<InterestPage />} />
+									<Route path="/settings/personalinfo" exact element={<PersonalInfoPage />} />
+									<Route path="/settings/profile" exact element={<ProfilePage />} />
+									<Route path="/settings/notifications" exact element={<NotificationsPage />} />
 
 									<Route element={<Home />} />
 								</Routes>

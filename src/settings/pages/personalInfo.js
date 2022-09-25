@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AppContext from "../../AppContext"; 
 import Breadcrumb from "../../commons/components/breadcrumb";
 
-export default function MyGroups(props){
+export default function PersonalInfo(props){
 
   const { loading, setLoading } = React.useContext(AppContext);
 	const { user, setuser } = React.useContext(AppContext);
@@ -11,8 +11,8 @@ export default function MyGroups(props){
     return(
         <section className="page ">
         <div className="header-page">
-          <h1>My groups</h1>
-          <Breadcrumb path="Profile" />
+          <h1>Personal Information</h1>
+          <Breadcrumb path="home" />
         </div>
         <div className="home-page"></div>
       </section>

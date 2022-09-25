@@ -37,9 +37,13 @@ a{
 }
 
 .header-page h1 {
-	font-family: "nunito";
+	color: var(--tertiary-color); 
+	font-size: 1.3rem;
+	font-weight: bold;
+	font-family: "patuaone";
+	 
 	font-size: 2rem;
-	padding-bottom: 0.8rem;
+	 
 }
 
 .table {
@@ -89,8 +93,8 @@ a{
 }
 
 button {
-	background-color: var(--primary);
-	color: var(--superlight);
+	background-color: var(--primary-color);
+	color: var(--primary-bg-color);
 	font-size: 0.8rem;
 	border: none;
 	border-radius: 0.3rem;
@@ -125,17 +129,19 @@ button:hover {
 	display: block;
 }
 
+ 
+
 h2 {
-	color: var(--dark); 
+	color: var(--tertiary-color);
 	font-size: 1.3rem;
 	font-weight: bold;
 	font-family: "patuaone";
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 h3 {
-	color: var(--dark);
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	color: var(--tertiary-color); 
 	font-size: 1rem;
 	font-weight: bold;
 	font-family: "patuaone";
@@ -151,7 +157,7 @@ ul.item-list {
 }
 
 ul.item-list li {
-	background-color: var(--primary-bg-color);
+	 
 	border-radius: 1rem;
 	padding: 1rem;
 	margin-bottom: 1rem;
@@ -159,4 +165,24 @@ ul.item-list li {
 
 ul.item-list li:hover {
 	cursor: pointer;
+}
+
+p{
+	padding: 1rem;
+padding-bottom: 1rem;
+background-color: white;
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+
+.box-theme-one{
+	background-color: var(--primary-color);
+	color: var(--primary-bg-color);
+	border-radius: 0.5rem; 
+}
+
+.box-theme-two{
+	background-color: var(--primary-bg-color);
+	color: var(--tertiary-color);
+	border-radius: 0.5rem; 
 }

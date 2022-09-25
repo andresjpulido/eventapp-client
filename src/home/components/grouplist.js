@@ -14,10 +14,8 @@ export default function GroupList(props) {
     
 
 	const groupList = groups.map((event, index) => (
-		<div key={index}>
-			<li onClick={() => goTodetails(`${event._id}`)}>{event.name}
-            </li>
-		</div>
+			<li key={index} className="box-theme-one" onClick={() => goTodetails(`${event._id}`)}>{event.name}
+            </li> 
 	));
 
 	return (

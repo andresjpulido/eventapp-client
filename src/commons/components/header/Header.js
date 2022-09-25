@@ -7,9 +7,7 @@ import icon_closed from "../../../assets/images/menu-icon-closed.png";
 import { useNavigate } from "react-router-dom";
 import Logo from "../logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import photo from "../../../assets/images/map.jpeg";
- 
-import SessionMenu from "../sessionmenu/sessionmenu";
+import photo from "../../../assets/images/map.jpeg";  
 
 export default function Header() {
 	const { user, setuser } = React.useContext(AppContext);
@@ -25,14 +23,16 @@ export default function Header() {
 	function updatePage(page) {
 		setpage(page);
 		setisMenuOpen(false);
-		history.push(page);
+		history(page);
 	}
+
+	if(!user || !user.name) return(<div></div>)
 
 	return (
 		<header className="header">
 			<div className="header-columns">
-				<div className="letf-side">{user && user.name && <SessionMenu />}
-					<button className="menu-mobile-icon" onClick={updateIsMenuOpen}>
+				<div className="letf-side">
+					<button onClick={updateIsMenuOpen} className="mobile-menu">
 						<img
 							src={isMenuOpen ? icon_closed : icon}
 							width="25px"
@@ -90,31 +90,52 @@ export default function Header() {
 				</li>
 
 				<li
-					className={page === "neofeed" ? "active-item" : ""}
-					onClick={() => updatePage("neofeed")}
+					className={page === "myevents" ? "active-item" : ""}
+					onClick={() => updatePage("myevents")}
 				>
-					<span>Neo feed</span>
+					<span>Your events</span>
 				</li>
 
 				<li
-					className={page === "nimages" ? "active-item" : ""}
-					onClick={() => updatePage("nimages")}
+					className={page === "mygroups" ? "active-item" : ""}
+					onClick={() => updatePage("mygroups")}
 				>
-					<span>Images</span>
+					<span>Your groups</span>
 				</li>
 
 				<li
-					className={page === "mrover" ? "active-item" : ""}
-					onClick={() => updatePage("mrover")}
+					className={page === "messages" ? "active-item" : ""}
+					onClick={() => updatePage("messages")}
 				>
-					<span>Rovers</span>
+					<span>Messages</span>
+				</li>
+
+				<li
+					className={page === "/settings/notifications" ? "active-item" : ""}
+					onClick={() => updatePage("/settings/notifications")}
+				>
+					<span>Notifications</span>
 				</li>
 
 				<li
 					className={page === "weather" ? "active-item" : ""}
 					onClick={() => updatePage("weather")}
 				>
-					<span>Weather</span>
+					<span>Settings</span>
+				</li>
+
+				<li
+					className={page === "/settings/interest" ? "active-item" : ""}
+					onClick={() => updatePage("/settings/interest")}
+				>
+					<span>Interests</span>
+				</li>
+
+				<li
+					className={page === "/settings/profile" ? "active-item" : ""}
+					onClick={() => updatePage("/settings/profile")}
+				>
+					<span>View profile</span>
 				</li>
 			</ul>
 		</header>

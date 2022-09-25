@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AppContext from "../../AppContext";
-import photo from "../../assets/images/map.jpeg"; 
+import AppContext from "../../AppContext"; 
 import Breadcrumb from "../../commons/components/breadcrumb";
 import GroupList from "../components/grouplist";
 import EventList from "../components/eventlist";
@@ -62,7 +61,7 @@ export default function Home() {
 	return (
 		<section className="page ">
 			<div className="header-page">
-				<h1>Welcome!</h1>
+				<h1>Welcome home!</h1>
 				<Breadcrumb path="home" />
 				
 			</div>

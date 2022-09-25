@@ -102,6 +102,9 @@
   padding: 1rem;
   position: relative;
   min-height: 15rem;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: cover;
 }
  
 .note-s5:before {
@@ -114,9 +117,7 @@
   height: 100%;
   opacity: 0.6;
   background-color: var(--primary-color);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
+
 }
 
 .note > h2 {

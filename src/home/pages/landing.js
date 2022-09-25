@@ -73,6 +73,7 @@ export default function Public() {
           style={{
             backgroundImage: `url(${people})`,
             backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
             width: "250px",
             height: "250px",
           }}

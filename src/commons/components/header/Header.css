@@ -1,6 +1,6 @@
 .header {
     background-color: var(--primary-bg-color);
-    display:none;
+    
 }
 
 .header-columns{
@@ -39,9 +39,7 @@ nav > ul > li:hover {
     cursor:pointer
 }
 
-.active-item{
-    background-color: red;   
-}
+
 
 .menu-mobile {
     display: none;
@@ -63,12 +61,24 @@ nav > ul > li:hover {
     align-items: center; 
 }
 
+.mobile-menu {
+    display: none;
+}
+
+.dropdown-child {
+    display: none;   
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%; 
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 767px) {
-     
+    .mobile-menu{
+        display: block;
+    }
 
     .menu-mobile {
         display: flex;
@@ -87,7 +97,7 @@ and (max-device-width : 767px) {
     .menu-mobile-icon {
         border: 1px rgb(30,30,30) solid;
         padding: 10px;       
-        display: inline-block;
+        display: inline-block; 
     }
 
     nav {
@@ -99,19 +109,25 @@ and (max-device-width : 767px) {
         display: block;    
     }
   
-    .dropdown-child {
-        display: none;   
-        position: absolute;
-        background-color: red;
-        width: 100%; 
+    .dropdown-child { 
+        background-color: var(--primary-color);
+        color: var(--primary-bg-color);
+        padding: 1rem;
     }
     
     .dropdown-child li {
         text-decoration: none;
-        display: block;
-        border-bottom: red .1rem solid;
+        display: block; 
+        
+        margin: 0.1rem;
+        padding: 0.1rem;
     }
     
+    .active-item{
+        background-color: var(--primary-bg-color); 
+        color: var(--tertiary-color)  
+    }
+
     .active{
         display: block;
         z-index: 1;
@@ -140,7 +156,7 @@ and (max-width : 320px) {
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
-     
+      
 }
 
 /* iPads (landscape) ----------- */
@@ -148,7 +164,7 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-/* Styles */
+    
 }
 
 /* iPads (portrait) ----------- */
@@ -162,13 +178,17 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
-     
+    .menu-mobile-icon{
+        display: none;
+     }
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-     
+    .menu-mobile-icon{
+        display: none;
+     }
 }
 
 /* iPhone 4 ----------- */

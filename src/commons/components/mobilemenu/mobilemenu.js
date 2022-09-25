@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 
 import { useNavigate } from "react-router-dom";
-import "./sessionmenu.css";
+import "./mobilemenu.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AppContext from "../../../AppContext";
 
@@ -56,7 +56,7 @@ export default function SessionMenu() {
 	}
 
 	return (
-		<Fragment>
+		<div className="mobile-menu">
 			<FontAwesomeIcon
 				icon={["fas", "ellipsis-vertical"]}
 				className="header-icon"
@@ -73,6 +73,6 @@ export default function SessionMenu() {
 					</ul>
 				</div>
 			)}
-		</Fragment>
+		</div>
 	);
 }

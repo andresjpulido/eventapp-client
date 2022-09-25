@@ -9,11 +9,16 @@ export default function ChatBox(props) {
 	let socket = props.socket;
 
     const { user, setuser } = React.useContext(AppContext);
+	const [isChatBoxOpen, setisChatBoxOpen] = useState(true);
+
+	function updateIsChatBoxOpen() {
+		setisChatBoxOpen(!isChatBoxOpen);
+	}
 
 	if (socket && user && user.name )
 		return (
              
-			<div className="chat-container">
+			<div onClick={updateIsChatBoxOpen} className={isChatBoxOpen ? "chat-container" : "chat-container-hidden"}>
 				<div className="chat-container-head">
 					<img src={avatar} alt={socket.id} className="avatar" />
 					<div className="name">user</div>

@@ -6,8 +6,7 @@ import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import photo from "../../../assets/images/map.jpeg";
 import Logo from "../logo";
-import SessionMenu from "../sessionmenu/sessionmenu";
-
+ 
 export default function Header1() {
 	const { user, setuser } = React.useContext(AppContext);
 	const { loading, setLoading } = React.useContext(AppContext);
@@ -56,7 +55,7 @@ export default function Header1() {
 
 				{user && user.name && <span>{user.name}</span>}
 
-				{user && user.name && <SessionMenu />}
+				{user && user.name }
 
 				{(!user || !user.name) && (
 					<div className="header-buttons">
