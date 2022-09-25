@@ -25,7 +25,7 @@ export default function Login() {
 		ev.preventDefault();
 
 		let url = process.env.REACT_APP_URL_SIGNIN;
-
+console.log("url", url)
 		setLoading(true);
 
 		const res = await fetch(url, {
